@@ -6,35 +6,106 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mini przewodnik po Paryżu</title>
+
+    <link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
 
-    <header class="mainHeader">
-        <h1 class="mainHeader mainHeader__logo logo">Przewodnik po: Francji</h1>
+    <header class="mainHeader mainHeader__container">
+        <h1 class="mainHeader mainHeader__logo logo">Przewodnik po: <span class="secColor">Francji</span></h1>
 
-        <nav class="mainHeader mainHeader__navigation logo">
+        <nav class="mainHeader mainHeader__navigation">
 
-            <a href="#section_1">Nagłówek</a>
-            <a href="#section_2"></a>
-            <a href="#section_3">lorem</a>
-            <a href="#section_4">lorem</a>
-            <a href="#section_5">lorem</a>
+            <a href="#section_1">O paryżu</a>
+            <a href="#section_2">Jak dojechać</a>
+            <a href="#section_3">Ciekawe miejsca</a>
+            <a href="#section_4">Transport</a>
+            <a href="#section_5">Restauracje</a>
 
         </nav>
     </header>
-    <main>
-        <header>
-            <h2>Francja</h2>
-
-        </header>
-
+    <main class="mainContainer mainContainer__container">
         <section id="section_1">
+            <h2>O Francji</h2>
 
         </section>
-        <section>
 
+        <section id="section_2" class="mainContainer mainContainer__section">
+            <header><h3>Jak dojechać</h3></header>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d167998.10803373056!2d2.206977064368058!3d48.858774103123785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2zUGFyecW8LCBGcmFuY2ph!5e0!3m2!1spl!2spl!4v1589206990922!5m2!1spl!2spl" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
+        <section id="section_3" class="mainContainer mainContainer__section">
+            <header><h3>Ciekawe miejsca</h3></header>
+            <div class="sliderCont sliderCont__container">
+                <div class="sliderCont sliderCont__button sliderCont__button--back disabled" data-type-button="0"></div>
+                <div class="sliderCont sliderCont__worker state1" data-id-state="1">
+                    <article>
+                            <h4>Wieża Eiffla</h4>
+                            <div class="row">
+                                <figure>
+                                    <img src="https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg?crop=entropy&cs=srgb&dl=low-angle-photo-of-eiffel-tower-699466.jpg&fit=crop&fm=jpg&h=1706&w=1280" alt="Zdjęcie wieża eiffla">
+                                    <figcaption>Wieża Eiffla, zdjęcie z dołu. Autor: <a href="https://www.instagram.com/flodahm.work/">Flo Dahm</a></figcaption>
+                                </figure>
+                                <p>Niekwestionowany symbol i zarazem największa atrakcja Paryża. To jedna z najwyższych konstrukcji na świecie. Znajduje się nad Sekwaną, tuż obok Pól Marsowych. Wieża zbudowana została specjalnie na paryską wystawę światową w 1889 roku. Turyści cenią sobie to miejsce ze względu na niesamowity widok. Jednak aby wjechać windą na górę, trzeba odstać swoje w kolejce.</p>
+                            </div>
+                        </article>
+                    <article>
+                        <h4>Luwr</h4>
+                        <div class="row">
+                            <figure>
+                                <img src="https://images.pexels.com/photos/2363/france-landmark-lights-night.jpg?crop=entropy&cs=srgb&dl=france-landmark-lights-night-2363.jpg&fit=crop&fm=jpg&h=852&w=1280" alt="Zdjęcie Luwru nocą">
+                                <figcaption>Luwr nocą. Autor: <a href="https://pixabay.com/users/edinugraha-30562/?tab=about">Edi Nugraha</a></figcaption>
+                            </figure>
+                            <p>To jedno z najsłynniejszych muzeów sztuki na świecie, i jedno z największych. Prawdziwa gratka dla miłośników sztuki. Znajduje się w nim około 350 tysięcy różnych eksponatów. Najsłynniejszym arcydziełem znajdującym się  muzeum jest Mona Lisa Leonarda da Vinci. Luwr często stanowi tło dla wielu popularnych filmów.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <h4>Katedra Notre Dame</h4>
+                        <div class="row">
+                            <figure>
+                                <img src="https://images.pexels.com/photos/1460145/pexels-photo-1460145.jpeg?crop=entropy&cs=srgb&dl=white-concrete-building-1460145.jpg&fit=crop&fm=jpg&h=891&w=1280" alt="Zdjęcie Luwru nocą">
+                                <figcaption>Katedra Notre Dame. Autor: <a href="https://www.instagram.com/adriheiszter/" target="_blank">adriheiszter</a></figcaption>
+                            </figure>
+                            <p>Dla wielu znana z bajki o słynnym Dzwonniku, powstałej na podstawie powieści Victora Hugo. Budowę katedry godnej Paryża rozpoczęto w XII wieku  i trwała ona blisko 200 lat! Budowla robi ogromne wrażenie na każdym turyście, głównie ze względu na monumentalizm i misterne zdobienia.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="sliderCont sliderCont__button sliderCont__button--next" data-type-button="1"></div>
+            </div>
+        </section>
+        <section id="section_4" class="mainContainer mainContainer__section">
+            <header><h3>Restauracje</h3></header>
+            <article>
+                <article>
+                    <h4>Metro w Paryżu</h4>
+                    <div class="zoom">
+                        <img src="https://mytravelcityguide.files.wordpress.com/2013/12/bus-lines-paris.gif" alt="mapa metra w paryżu">
+                    </div>
+                    <p><b>Metro w Paryżu</b>(Métropolitain) ma aż 14 linii (16 z liniami bis) i gęsto pokrywa swoją siatką całe miasto. Metro jest najlepszym sposobem poruszania się po Paryżu, dojedziesz nim do praktycznie wszystkich najważniejszych atrakcji. Paryskie metro powstało w 1900 r. i ma ponad 200 km łącznej długości. Stacje metra są gęsto rozsiane po całym mieście i stosunkowo dobrze oznaczone. Wejście do strefy peronowej jest zawsze poprzedzone bramkami automatycznymi oraz automatami biletowymi. Te ostatnie przyjmują płatności kartami oraz gotówką.</p>
+                </article>
+                <article>
+                    <h4>Busy w Paryżu</h4>
+                    <div class="">
+                        <img src="https://www.discoverwalks.com/blog/wp-content/uploads/2015/10/paris-bus.jpg" alt="mapa metra w paryżu">
+                    </div>
+                    <p><b>Autobusy w Paryżu</b> to drugi najpopularniejszy środek transportu. Sam korzystałem z nich tylko raz, bo metro wystarczało mi w zupełności. Czekając na autobus pamiętaj, że do autobusu wchodzi się zawsze przednimi drzwiami, gdzie należy skasować posiadany bilet lub kupić go u kierowcy, a następnie skasować. Oczekując na przyjazd pojazdu należy machnąć ręką, by kierowca się zatrzymał. Chęć wyjścia na najbliższym przystanku sygnalizujemy wciskając przycisk wewnątrz autobusu.</p>
+                </article>
+            </article>
+        </section>
+        <section id="section_5" class="mainContainer mainContainer__section">
+            <header><h3>Restauracje</h3></header>
+            <article>
+                <article>
+                    <h4>Legendarna restauracja „Bouillon Chartier”</h4>
+                    <p>Osobom mającym ochotę na typowo francuski posiłek w przystępnej cenie polecamy kultową restaurację, w której czas zatrzymał się ponad sto lat temu: „Le Bouillon Chartier”. Ta niegdyś robotnicza jadłodajnia mieści dzisiaj ponad 300 gości. Jej wnętrze zachwyca prostotą a zarazem elegancją. Tradycyjne francuskie menu niewątpliwie przypadnie gustu większości turystom. Dodatkowo ceny jak na tak popularną restaurację są bardzo przystępne – za danie główne zapłacimy <b>8.5 – 13.50 €</b>. Warto dodać, że w „Le Bouillon Chartier” nie ma kas, a kelnerzy zapisują rachunek na obrusie stolika, przy którym siedzi gość.</p>
+                </article>
+                <article>
 
+                    <h4>Pyszny falafel w „L’As du Fallafel”</h4>
+                    <p>Obok bagietek, naleśników czy żabich udek, istnieje jeszcze jedna charakterystyczna i legendarna potrawa, która zaskarbiła serca samych Paryżan: falafel. Falafel czyli chlebki pita nadziewane smażonymi kotlecikami z przyprawionej ciecierzycy i aromatycznymi dodatkami: hummusem, kapustą, ogórkami. Potrawa ta szczególnie popularna jest w barach typu fast food znajdujących się przy ulicy Rue des Rosiers w dzielnicy Marais. Kultowy wręcz lokal, w którym serwowany jest podobno najlepszy falafel w Paryżu, to „L’As du Fallafel”. Można zjeść tutaj smaczny i pożywny posiłek już za <b>6 €</b>.</p>
 
+                </article>
+            </article>
         </section>
 
     </main>
@@ -42,4 +113,6 @@
 
 
 </body>
+<script src="app.js"></script>
+
 </html>
