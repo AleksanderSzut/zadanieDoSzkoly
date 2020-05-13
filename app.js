@@ -56,29 +56,44 @@ zoom.forEach((element, key) => {
 
     magnifier.classList.add("magnifier");
     magnifier.style.backgroundImage = "url("+photoSource+")";
+    magnifier.style.backgroundSize = "2000%";
+    magnifier.classList.add("disabled");
+    element.addEventListener("click", (e) =>{
+        e.target.classList.toggle('smallScale');
+        console.log(e.target.parentNode.classList.toggle("row"));
+    });
 
     element.appendChild(magnifier);
     element.addEventListener("mouseenter", (e)=>{
-        console.log(e);
+        magnifier.classList.remove("disabled");
     });
     element.addEventListener("mouseleave", (e)=>{
-        console.log(e);
+        magnifier.classList.add("disabled");
     });
 
     element.addEventListener("mousemove", (e)=>{
         let mousePosX = e.clientX;
         let mousePosY = e.clientY;
-        let photoBounding = element.getBoundingClientRect(),
-            x = e.clientX - photoBounding.left,
-            y = e.clientY - photoBounding.top,
-            photoSize = parseInt(window.getComputedStyle(element).height),
-            magSize = parseInt(window.getComputedStyle(magnifier).height);
+        let options = e.target.getBoundingClientRect();
 
-        x -= magSize/2;
-        y -= magSize/2;
-        magnifier.style.left = e.clientX-magSize/2+"px";
-        magnifier.style.top = e.clientY-magSize/2+"px";
-        magnifier.style.backgroundSize = photoSize+"px";
+        let magnifierWidth = magnifier.offsetWidth;
+        let magnifierHeight = magnifier.offsetHeight;
+
+        let positionTop = e.clientY - options.top;
+        let topPercent = ((positionTop) / options.height)*100;
+
+        let positionLeft = e.clientX - options.left;
+        let leftPercent = ((positionLeft ) / options.width)*100;
+
+        if(positionTop + parseInt(magnifierHeight)/2 < options.height && positionTop - parseInt(magnifierHeight)/2  > 0)
+            magnifier.style.top = positionTop - magnifierWidth/2 + "px";
+
+        if(positionLeft + parseInt(magnifierWidth)/2 < options.width && positionLeft - parseInt(magnifierHeight)/2  > 0)
+            magnifier.style.left = positionLeft - magnifierWidth/2 + "px";
+
+
+
+        magnifier.style.backgroundPosition = (leftPercent)+"%" + (topPercent)+"% ";
     });
 
 });
